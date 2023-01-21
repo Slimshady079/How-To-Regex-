@@ -5,7 +5,9 @@ In this tutorial we will be going over some of the things that make up regex and
 ## Summary
 
 I have an email regex to display.
-This is the code:
+This is the code: /[\w\+!$%#&-]+@[\w\+!$%#&-]+\.[\w]+/mg
+
+So part of this expression was joke between me and a friend of mine. Essentially we are using / to start the expression. The [] is a bracket expression to confine what we want to search. \w is equal to ^a-za-z0-9* which we are trying to target in the email that is everything infront of the +@ sign. The "!$%#&-" is part of the joke because although it will capture it, no one is going to have an email with these characters. Maybe the !. But including these in the bracket, means it will pick up all ^a-za-z0-9* and the special characters infront of the @. After the @ is the same expression. +\.[\w] This will capture everything after the . ex.(.com,.net.org) and the mg is our flags! Thanks for reading!
 
 ## Table of Contents
 
